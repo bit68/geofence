@@ -10,6 +10,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  x: any;
   notificationAlreadyReceived = false;
   originalCoords;
   DISTANCE_TO_MOVE = 0;
@@ -19,6 +20,7 @@ export class HomePage {
     public platform: Platform,
     public geolocation: Geolocation,
     public localNotifications: LocalNotifications) {
+    this.x = 1;
 
     platform.ready().then(() => {
       this.geolocation.getCurrentPosition()
@@ -53,10 +55,12 @@ export class HomePage {
 
   showNotification = () => {
     this.localNotifications.schedule({
+      id: this.x,
       text: 'There is a legendary Pokemon near you'
     });
 
     this.notificationAlreadyReceived = true;
+    this.x++;
   }
 
 
