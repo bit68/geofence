@@ -56,7 +56,7 @@ export class HomePage {
   showNotification = () => {
     this.localNotifications.schedule({
       id: this.x,
-      text: 'There is a legendary Pokemon near you'
+      text: this.x+'There is a legendary Pokemon near you'
     });
 
     this.notificationAlreadyReceived = true;
