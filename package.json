@@ -31,12 +31,14 @@
     "@ionic/pro": "1.0.20",
     "@ionic/storage": "2.1.3",
     "cordova-android": "~6.3.0",
+    "cordova-ios": "~4.5.4",
+    "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-background-mode": "^0.7.2",
-    "cordova-plugin-device": "^2.0.1",
+    "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.2.0",
-    "cordova-plugin-local-notification": "~0.9.0-beta.2",
+    "cordova-plugin-local-notification": "^0.8.4",
     "cordova-plugin-mauron85-background-geolocation": "^2.3.5",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-whitelist": "^1.3.3",
@@ -58,7 +60,6 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-local-notification": {},
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       },
@@ -70,12 +71,15 @@
         "ACCOUNT_NAME": "@string/app_name",
         "ACCOUNT_LABEL": "@string/app_name",
         "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
-        "CONTENT_AUTHORITY": "$PACKAGE_NAME"
+        "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+        "ALWAYS_USAGE_DESCRIPTION": "This app always requires location tracking"
       },
-      "cordova-plugin-background-mode": {}
+      "cordova-plugin-background-mode": {},
+      "cordova-plugin-local-notification": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

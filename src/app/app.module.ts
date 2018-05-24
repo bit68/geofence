@@ -10,6 +10,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Geolocation } from '@ionic-native/geolocation';
 import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { BackgroundMode } from '@ionic-native/background-mode';
+import { GeofencesProvider } from '../providers/geofences/geofences';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -21,7 +23,8 @@ import { BackgroundMode } from '@ionic-native/background-mode';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +38,8 @@ import { BackgroundMode } from '@ionic-native/background-mode';
     Geolocation,
     LocalNotifications,
     BackgroundGeolocation,
-    BackgroundMode
+    BackgroundMode,
+    GeofencesProvider
   ]
 })
 export class AppModule {}
